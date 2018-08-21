@@ -52,14 +52,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
     let button = document.getElementsByTagName('button');
   button = button[0];
-  button.addEventListener('click',function(){
-    let uList =document.createElement('ul');
-    let newLi =document.createElement('li');
-    let liText= document.createTextNode('This is list item1');
-    newLi.appendChild(liText);
-    uList.appendChild(newLi);    
-    document.body.appendChild(uList);
-  });
+  button.addEventListener('click',addList);
       
 });
 
@@ -71,3 +64,20 @@ function getColor(){
   }
 
   
+  function addList(){
+    let uList;
+    if (document.getElementsByTagName('ul').length === 0){
+      uList = document.createElement('ul');
+    } else{
+      uList =document.getElementsByTagName('ul');
+      uList =uList[0];
+    }
+    let numLi = document.getElementsByTagName('li').length;
+    let newLi =document.createElement('li');
+    let liText= document.createTextNode('This is list item '+(numLi+1));
+    newLi.appendChild(liText);
+    uList.appendChild(newLi);    
+    document.body.appendChild(uList);
+}
+
+
