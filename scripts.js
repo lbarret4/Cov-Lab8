@@ -71,39 +71,28 @@ function getColor(){
   
   
   function addList(){
-      let uList;
-      if (document.getElementsByTagName('ul').length === 0){
-        uList = document.createElement('ul');
-      } else{
-        uList =document.getElementsByTagName('ul');
-        uList =uList[0];
-      }
-      let numLi = document.getElementsByTagName('li').length;
-      let newLi =document.createElement('li');
-      let liText= document.createTextNode('This is list item '+(numLi+1));
-      newLi.appendChild(liText);
-      uList.appendChild(newLi);
-      uList.addEventListener('click',changeListColor);
-      document.body.appendChild(uList);  
-     
-    
-  }
+    let uList;
+    if (document.getElementsByTagName('ul').length === 0){
+      uList = document.createElement('ul');
+    } else{
+      uList =document.getElementsByTagName('ul');
+      uList =uList[0];
+    }
+    let numLi = document.getElementsByTagName('li').length;
+    let newLi =document.createElement('li');
+    let liText= document.createTextNode('This is list item '+(numLi+1));
+    newLi.appendChild(liText);
+    uList.appendChild(newLi);
+    newLi.addEventListener('click',function(){
+      newLi.style.color=getColor();
+    });
+    document.body.appendChild(uList);  
+   
   
-  function changeListColor(){
-    
-    let liItems = document.getElementsByTagName('li');
-      console.log(liItems[0].innerHTML);
-      for(var j=0;j<liItems.length;j++)
-        {
-          console.log(liItems[j].innerHTML);
-          liItems[j].addEventListener('click',function(){
-             console.log(liItems[j].innerHTML);
-            liItems[j].style.color =  'red'; //getColor();
-          
-          });
-        }
-    
-  }
+}
+
+  
+
   
   
   
