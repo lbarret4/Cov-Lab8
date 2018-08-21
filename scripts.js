@@ -86,13 +86,14 @@ function getColor(){
     newLi.addEventListener('click',function(){
       newLi.style.color=getColor();
     });
+    newLi.addEventListener('dblclick',removeList);     
     document.body.appendChild(uList);  
-   
+
   
 }
 
+function removeList(e){
+  e.target.parentNode.removeChild(e.target);
   
-
-  
-  
+}  
   
