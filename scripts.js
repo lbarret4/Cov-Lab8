@@ -54,11 +54,11 @@ window.addEventListener('DOMContentLoaded',function(){
   button = button[0];
   button.addEventListener('click',function(){
     let uList =document.createElement('ul');
-    headerDiv.appendChild(uList);
     let newLi =document.createElement('li');
     let liText= document.createTextNode('This is list item1');
+    newLi.appendChild(liText);
     uList.appendChild(newLi);    
-    document.body.appendChild(ulist);
+    document.body.appendChild(uList);
   });
       
 });
@@ -69,3 +69,5 @@ function getColor(){
     
     return color[colorIndex];
   }
+
+  
