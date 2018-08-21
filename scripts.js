@@ -49,6 +49,18 @@ window.addEventListener('DOMContentLoaded',function(){
     h1.addEventListener('click',function(){
     h1.style.color = getColor();
     });
+
+    let button = document.getElementsByTagName('button');
+  button = button[0];
+  button.addEventListener('click',function(){
+    let uList =document.createElement('ul');
+    headerDiv.appendChild(uList);
+    let newLi =document.createElement('li');
+    let liText= document.createTextNode('This is list item1');
+    uList.appendChild(newLi);    
+    document.body.appendChild(ulist);
+  });
+      
 });
 
 function getColor(){

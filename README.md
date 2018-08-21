@@ -12,8 +12,8 @@
 6. Repeat the following task for h3's through h6's.
 7. Give each heading element a class name that represents what type of heading element it is. If it is an h1, the class should be "h1".
 8. Go to styles.css and style each different heading element with a different color. Target the elements by class name.
-9. Create and array of 8 colors, add an event listener that changes the color of a heading to a random color from the array when it is double clicked.
-10. bAdd a button in the index.html, give this button text that says "Click to add new list item", give the button a class name of your choosing.
+9. Create an array of 8 colors, add an event listener that changes the color of a heading to a random color from the array when it is double clicked.
+10. Add a button in the index.html, give this button text that says "Click to add new list item", give the button a class name of your choosing.
 11. In the scripts.js file, write a function that inserts a list item, have the first item say "This is list item 1" and any subsequent list item should have the number incremented by 1.
 12. Create an event listener that calls the new list item function every time the button is clicked.
 13. Using the same random color function created above, apply an event listener that when a list item is clicked once, it changes the color of the font to one fo the 8 random colors.
