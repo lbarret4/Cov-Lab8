@@ -86,6 +86,7 @@ function getColor(){
     newLi.addEventListener('click',function(){
       newLi.style.color=getColor();
     });
+<<<<<<< HEAD
     newLi.addEventListener('dblclick',removeList);     
     document.body.appendChild(uList);  
 
@@ -96,4 +97,15 @@ function removeList(e){
   e.target.parentNode.removeChild(e.target);
   
 }  
+=======
+    newLi.addEventListener('dblclick',function(){
+      uList.removeChild(newLi);
+      
+    });
+    document.body.appendChild(uList);  
+   
+  
+}
+  
+>>>>>>> 01906191d778e51e755037697e12c092b08d5a05
   
