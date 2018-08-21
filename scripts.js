@@ -45,4 +45,15 @@ window.addEventListener('DOMContentLoaded',function(){
     h6.appendChild(h6Text);
     h6.setAttribute('class', 'h6');
     document.body.appendChild(h6);
+
+    h1.addEventListener('click',function(){
+    h1.style.color = getColor();
+    });
 });
+
+function getColor(){
+    let  color =['#efe2f3','#042c62','#ceb245','#4b5567,','#266674'];
+    let colorIndex = Math.ceil(Math.random()*6)-1;
+    
+    return color[colorIndex];
+  }
